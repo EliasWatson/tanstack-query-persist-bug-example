@@ -1,5 +1,5 @@
 import { type ReactNode } from "react";
-import {QueryKey, queryOptions, QueryPersister} from "@tanstack/react-query";
+import { QueryKey, queryOptions, QueryPersister } from "@tanstack/react-query";
 import { experimental_createPersister } from "@tanstack/query-persist-client-core";
 
 function createPersister<TData, TQueryKey extends QueryKey>(): QueryPersister<TData, TQueryKey> {
