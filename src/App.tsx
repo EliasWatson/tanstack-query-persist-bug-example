@@ -25,7 +25,7 @@ function App(): ReactNode {
 
   // No type errors if we define the generic on queryOptions
   queryOptions<string>({
-    queryKey: ['bad-query'],
+    queryKey: ['fixed-bad-query'],
     // Ignoring the unused variable error:
     // @ts-expect-error
     queryFn: (args) => 'test',
