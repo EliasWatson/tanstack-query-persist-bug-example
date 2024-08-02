@@ -17,10 +17,8 @@ function App(): ReactNode {
   // Type error when queryFn has arguments:
   queryOptions({
     queryKey: ['bad-query'],
-    // Ignoring the unused variable errors:
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // Ignoring the unused variable error:
     // @ts-expect-error
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     queryFn: (args) => 'test',
     persister: createPersister<string>(),
   });
@@ -28,10 +26,8 @@ function App(): ReactNode {
   // No type errors if we define the generic on queryOptions
   queryOptions<string>({
     queryKey: ['bad-query'],
-    // Ignoring the unused variable errors:
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // Ignoring the unused variable error:
     // @ts-expect-error
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     queryFn: (args) => 'test',
     persister: createPersister<string>(),
   });
