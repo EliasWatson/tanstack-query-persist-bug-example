@@ -17,8 +17,10 @@ function App(): ReactNode {
   // Type error when queryFn has arguments:
   queryOptions({
     queryKey: ['bad-query'],
-    // Ignoring: 'args' is declared but its value is never read.
-    // @ts-ignore
+    // Ignoring the unused variable errors:
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     queryFn: (args) => 'test',
     persister: createPersister<string, string[]>(),
   });
